@@ -43,7 +43,7 @@ include  "navbar.php";
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Dashboard</h1>
+            <h1 class="m-0 text-dark">Admin Dashboard</h1>
           </div><!-- /.col -->  
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -56,6 +56,64 @@ include  "navbar.php";
     </div>
     <!-- /.content-header -->
 
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+         
+        <div class="row">
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+             
+                   
+                  <sup style="font-size: 20px">
+              
+                    </sup>
+             
+
+                <p> new Orders</p>  
+
+              </div>
+              <div class="icon">
+                <i class="ion ion-bag"></i>
+
+              </div>
+                <a href="orders.php" class="small-box-footer">View orders <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3>  
+                   
+
+                <p>Sales</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+              </div>
+              <a href="sales.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+        
+          <!-- ./col -->
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row">
+          <!-- Left col -->
+          
+          <!-- right col -->
+        </div>
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+    </section>
+    
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
@@ -82,6 +140,241 @@ include  "navbar.php";
                 <a href="orders.php" class="small-box-footer">View orders <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
+          
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3>  
+                   
+
+                <p>Sales</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+              </div>
+              <a href="sales.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+        
+          <!-- ./col -->
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row">
+          <!-- Left col -->
+          
+          <!-- right col -->
+        </div>
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- Main content -->
+    <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Finance Manager Dashboard</h1>
+          </div><!-- /.col --> 
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+             
+                   
+                  <sup style="font-size: 20px">
+              
+                    </sup>
+             
+
+                <p> new Orders</p>  
+
+              </div>
+              <div class="icon">
+                <i class="ion ion-bag"></i>
+
+              </div>
+                <a href="orders.php" class="small-box-footer">View orders <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3>  
+                   
+
+                <p>Sales</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+              </div>
+              <a href="sales.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+        
+          <!-- ./col -->
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row">
+          <!-- Left col -->
+          
+          <!-- right col -->
+        </div>
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Shipment  Manager Dashboard</h1>
+          </div><!-- /.col --> 
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+             
+                   
+                  <sup style="font-size: 20px">
+              
+                    </sup>
+             
+
+                <p> new Orders</p>  
+
+              </div>
+              <div class="icon">
+                <i class="ion ion-bag"></i>
+
+              </div>
+                <a href="orders.php" class="small-box-footer">View orders <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3>  
+                   
+
+                <p>Sales</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+              </div>
+              <a href="sales.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+        
+          <!-- ./col -->
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row">
+          <!-- Left col -->
+          
+          <!-- right col -->
+        </div>
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Driver Dashboard</h1>
+          </div><!-- /.col --> 
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+             
+                   
+                  <sup style="font-size: 20px">
+              
+                    </sup>
+             
+
+                <p> new Orders</p>  
+
+              </div>
+              <div class="icon">
+                <i class="ion ion-bag"></i>
+
+              </div>
+                <a href="orders.php" class="small-box-footer">View orders <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3>  
+                   
+
+                <p>Sales</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+              </div>
+              <a href="sales.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+        
+          <!-- ./col -->
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row">
+          <!-- Left col -->
+          
+          <!-- right col -->
+        </div>
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- Main content -->
+    <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Suppliers Dashboard</h1>
+          </div><!-- /.col -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+             
+                   
+                  <sup style="font-size: 20px">
+              
+                    </sup>
+             
+
+                <p> new Orders</p>  
+
+              </div>
+              <div class="icon">
+                <i class="ion ion-bag"></i>
+
+              </div>
+                <a href="orders.php" class="small-box-footer">View orders <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->

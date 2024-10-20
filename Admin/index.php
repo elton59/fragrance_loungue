@@ -15,7 +15,7 @@ echo
 '<script>alert("Login success");
 				window.location.replace("Admin/index.php")
 		</script>';
-		$_SESSION['username']=$username;
+		$_SESSION['username']=$user_email;
 
 exit();
 }

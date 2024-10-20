@@ -46,7 +46,7 @@
   <!--Copyright-->
   <div class="footer-copyright py-3">
     © 2023 Copyright:
-    <a href="#" target="_blank"> eltonokoth</a>
+    <a href="#" target="_blank"> joyleen</a>
   </div>
   <!--/.Copyright-->
 

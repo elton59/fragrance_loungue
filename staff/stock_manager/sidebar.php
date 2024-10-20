@@ -31,6 +31,14 @@
                 <span class="badge badge-info right"></span>
               </p>
             </a>
+            <li class="nav-item" >
+            <a href="searchproduct.php" class="nav-link">
+              <i class="nav-icon fas fa-industry"></i>
+              <p>
+                RESTOCK PRODUCT
+                <span class="badge badge-info right"></span>
+              </p>
+            </a>
           <li class="nav-item" >
             <a href="products.php" class="nav-link">
               <i class="nav-icon fas fa-industry"></i>

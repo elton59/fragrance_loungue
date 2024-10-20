@@ -2,11 +2,14 @@
 <?php
 include("db.php");
 include("navbar.php");
+// error_reporting(E_ERROR | E_PARSE);
+// @ini_set('display_errors', 0);
  if(!isset($_SESSION['username']))
  {
    header('location:login.php');
  }
-
+ $ship = isset($_GET['scost']) ? $_GET['scost'] : 0;
+ $loc = isset($_GET['location']);
 ?>
 <html lang="en">
 <head>
@@ -121,6 +124,7 @@ echo "<script>
             $qty=$row['qty'];
             $cost=$qty*$pci;
             $total += $cost;
+
           echo"
          
             <li class='list-group-item d-flex justify-content-between lh-condensed'>
@@ -182,6 +186,7 @@ while ($row = $result->fetch_assoc()) {
     $qty = $row['qty'];
     $cost = $qty * $pci;
     $total += $cost;
+    $grand=$ship+$total;
     $orderIds[] = $orderid;
     $otime=time();
 }
@@ -232,17 +237,43 @@ echo
 </div>
 <!--email-->
 <div class='md-form mb-5'>
-<input type='text' readonly id='address-2' class='form-control' placeholder='Total' name='total' value=$total>
+<input type='text' readonly id='address-2' class='form-control' placeholder='Total' value=$ship>
+<label for='address-2' class=''>Shipment Cost</label>
+</div>
+
+<div class='md-form mb-5'>
+<input type='text' readonly id='address-2' class='form-control' placeholder='Total'  value=$total>
+<label for='address-2' class=''>Cart Cost</label>
+</div
 <label for='address-2' class=''>Total</label>
+<div class='md-form mb-5'>
+<input type='text' readonly id='address-2' class='form-control' placeholder='Total' name='total' value=$grand>
+
 </div>
 
 <!--address-2-->
 <div class='md-form mb-5'>
-<input type='text' required id='address-2' name='tid' class='form-control' placeholder='Transaction ID'>
-<label for='address-2' class=''>Transaction ID</label>
+<div class='md-form mb-5'>
+  <input type='text' required id='address-2' name='tid' class='form-control' placeholder='Transaction ID' oninput='validateTransactionID(this)'>
+  <label for='address-2'maxlength='10' class=''>Transaction ID</label>
+  <small id='address-2-error' class='text-danger' style='display:none;'>Transaction ID must be uppercase and 10 characters long.</small>
 </div>
-<!--time-->
+<script>
+function validateTransactionID(input) {
+  const errorElement = document.getElementById('address-2-error');
+  const value = input.value.toUpperCase();
+  input.value = value;  // Convert input to uppercase
 
+  if (/^[A-Z0-9]{10}$/.test(value)) {
+    errorElement.style.display = 'none';
+    input.setCustomValidity('');  // Clear any custom validity errors
+  } else {
+    errorElement.style.display = 'block';
+    input.setCustomValidity('Transaction ID must be uppercase and 10 characters long.');
+  }
+}
+</script>
+  
 <input type='hidden' readonly id='address-2' placeholder='time'name='oids'  value='" . implode(',', $orderIds) . "'>
 
 

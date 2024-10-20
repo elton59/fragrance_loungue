@@ -26,9 +26,9 @@
           <li class="nav-item">
             <a href="customer.php" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
-              <p style="color:white">
+             
                 CUSTOMERS
-              </p>
+              
             </a>
           </li>
           <li class="nav-item" >

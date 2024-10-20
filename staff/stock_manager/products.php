@@ -66,7 +66,7 @@ include  "navbar.php";
                     <p> Program Tracker</p>
                     <table id="example2" class="table table-bordered table-hover">
                       <thead>
-                        <tr><th>PRODUCT_ID</th><th>PRODUCT_NAME</th><th>PRODUCT_Image</th><th>QUANTITY</th><th>STATUS</th></tr>
+                        <tr><th>PRODUCT_ID</th><th>PRODUCT_NAME</th><th>PRODUCT_Image</th><th>Quantity</th><th>STATUS</th></tr>
                       </thead>
                     
                        <?php
@@ -80,7 +80,7 @@ include  "navbar.php";
                     <td>".$row['id']."</td>
                     <td>".$row['product_name']."</td>
                     <td><img src='../../img/perfumes/".$row['product_img_name']."' alt='Product Image'></td>
-                    <td>".$row['quantity']."</td>
+                    <td>".$row['stock_in']."</td>
                     <td>".$row['status']."</td>
                  
                    </tbody>
@@ -176,7 +176,7 @@ include  "navbar.php";
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy;  <a href="http://elton.html">eltonokoth 2023</a>.</strong>
+    <strong>Copyright &copy;  <a href="http://elton.html">joyleen 2023</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
     

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 11, 2023 at 10:43 AM
+-- Generation Time: Jul 17, 2024 at 11:40 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.1
 
@@ -67,7 +67,8 @@ CREATE TABLE `customers` (
 
 INSERT INTO `customers` (`customer_id`, `firstname`, `email`, `gender`, `location`, `status`, `password`, `phone_number`, `lastname`, `address`) VALUES
 (48, 'joylene', 'joylene@gmail.com', 'female', 'meru', 'approved', '#Karibu2030', '0722334444', 'joylene', '123 maua road meru'),
-(49, 'joylene 2', 'jolyele2@gmail.com', 'female', 'meru', 'approved', '#Joylene22023', '0711223344', 'joylene 3', '43432meru');
+(49, 'joylene 2', 'jolyele2@gmail.com', 'female', 'meru', 'approved', '#Joylene22023', '0711223344', 'joylene 3', '43432meru'),
+(50, 'aaa', 'aa@gmail.com', 'male', 'sss', 'pending', 'ss', '0811221122', 'aaaa', 'ss');
 
 -- --------------------------------------------------------
 
@@ -91,7 +92,7 @@ CREATE TABLE `drivers` (
 --
 
 INSERT INTO `drivers` (`driver_id`, `driver_name`, `email`, `van_id`, `status`, `phone_number`, `password`, `account_status`) VALUES
-(2, 'mary', 'mary@gmail', '334', 'allocated', '0711233234', '#Mary2030', 'approved'),
+(2, 'mary', 'mary@gmail', '334', 'available', '0711233234', '#Mary2030', 'approved'),
 (3, 'mark', 'mark@gmail', '11234', 'allocated', '0733224411', '#Mark2030', 'approved'),
 (4, 'cyril', 'cyril@gmail', '765', 'allocated', '0788663453', '#Cyril2030', 'approved');
 
@@ -102,26 +103,41 @@ INSERT INTO `drivers` (`driver_id`, `driver_name`, `email`, `van_id`, `status`, 
 --
 
 CREATE TABLE `feedback` (
-  `message_id` int(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `message` varchar(50) NOT NULL,
-  `status` enum('read','unread') NOT NULL DEFAULT 'unread',
-  `reply` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `id` int(50) NOT NULL,
+  `firstname` varchar(50) DEFAULT NULL,
+  `lastname` varchar(50) DEFAULT NULL,
+  `phonenumber` varchar(50) DEFAULT NULL,
+  `message` varchar(50) DEFAULT NULL,
+  `receiver` varchar(50) DEFAULT NULL,
+  `reply` varchar(50) DEFAULT NULL,
+  `userid` int(50) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `status` enum('pending','read','archived') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `feedback`
 --
 
-INSERT INTO `feedback` (`message_id`, `email`, `message`, `status`, `reply`) VALUES
-(2, 'pato@gmail.com', 'good work elton', 'unread', ''),
-(22, 'k@gmail.com', 'k', 'unread', ''),
-(23, 'k@gmail.com', 'k', 'unread', ''),
-(24, 'k@gmail.com', 'k', 'unread', ''),
-(25, 'k@gmail.com', 'k', 'unread', ''),
-(26, 'k@gmail.com', 'k', 'unread', ''),
-(27, 'k@gmail.com', 'excellent', 'unread', ''),
-(28, 'k@gmail.com', 'edsrefds', 'unread', '');
+INSERT INTO `feedback` (`id`, `firstname`, `lastname`, `phonenumber`, `message`, `receiver`, `reply`, `userid`, `email`, `status`) VALUES
+(41, NULL, NULL, NULL, 'Work completed ', 'joyleen@gmail.com', NULL, NULL, 'odongo@gmail.com', 'read'),
+(42, NULL, NULL, NULL, 'Well done guys', 'kafar@gmail.com', NULL, NULL, 'odongo@gmail.com', 'pending'),
+(43, NULL, NULL, NULL, 'Welcome', 'odongo@gmail.com', NULL, NULL, 'joyleen@gmail.com', 'pending'),
+(44, NULL, NULL, NULL, 'Oyaa ', 'kafar@gmail.com', NULL, NULL, 'odongo@gmail.com', 'pending'),
+(45, NULL, NULL, NULL, 'Oyaa', 'odongo@gmail.com', NULL, NULL, 'kafar@gmail.com', 'pending'),
+(46, NULL, NULL, NULL, 'Oyaa', 'odongo@gmail.com', NULL, NULL, 'kafar@gmail.com', 'pending'),
+(47, NULL, NULL, NULL, 'abc', 'nur@gmail.com', NULL, NULL, 'jacky@gmail.com', 'pending'),
+(48, NULL, NULL, NULL, 'aa', 'jacky@gmail.com', NULL, NULL, 'nur@gmail.com', 'pending'),
+(49, NULL, NULL, NULL, 'aab', 'charles@majengo.com', NULL, NULL, 'jacky@gmail.com', 'pending'),
+(50, NULL, NULL, NULL, 'wassup\r\n', 'odongo@gmail.com', NULL, NULL, 'kafar@gmail.com', 'pending'),
+(51, NULL, NULL, NULL, 'a', 'eltonkoth59@gmail.com', NULL, NULL, '<br />\r\n<b>Warning</b>:  Undefined variable $user ', 'pending'),
+(52, NULL, NULL, NULL, 'a', 'eltonkoth59@gmail.com', NULL, NULL, '<br />\r\n<b>Warning</b>:  Undefined variable $user ', 'pending'),
+(53, NULL, NULL, NULL, 'a', 'eltonkoth59@gmail.com', NULL, NULL, '<br />\r\n<b>Warning</b>:  Undefined variable $user ', 'pending'),
+(54, NULL, NULL, NULL, 'a', 'eltonkoth59@gmail.com', NULL, NULL, '<br />\r\n<b>Warning</b>:  Undefined variable $user ', 'pending'),
+(55, NULL, NULL, NULL, 'a', 'eltonkoth59@gmail.com', NULL, NULL, '<br />\r\n<b>Warning</b>:  Undefined variable $user ', 'pending'),
+(56, NULL, NULL, NULL, 'a', 'eltonkoth59@gmail.com', NULL, NULL, '<br />\r\n<b>Warning</b>:  Undefined variable $user ', 'pending'),
+(57, NULL, NULL, NULL, 'a', 'ambrosedeh@gmail.com', NULL, NULL, 'joyleen@gmail.com', 'pending'),
+(58, NULL, NULL, NULL, 'a', 'joyleen@gmail.com', NULL, NULL, 'jolyele2@gmail.com', 'pending');
 
 -- --------------------------------------------------------
 
@@ -179,7 +195,7 @@ INSERT INTO `orders` (`id`, `product_id`, `customer_id`, `driver_id`, `order_sta
 (17, 1, 0, 0, 'pending', 0, NULL),
 (23, 2, 49, 3, 'payment_approved', 11, '1688275198'),
 (28, 1, 49, 1, 'delivered', 44, NULL),
-(29, 1, 49, 0, 'awaiting_payment_approval', 11, '1688464267'),
+(29, 1, 49, 0, 'payment_approved', 11, '1688464267'),
 (30, 2, 49, 0, 'awaiting_payment_approval', 33, '1688464267'),
 (31, 1, 49, 0, 'awaiting_payment_approval', 11, '1689664085'),
 (32, 2, 49, 0, 'awaiting_payment_approval', 11, '1689664756'),
@@ -206,8 +222,10 @@ INSERT INTO `orders` (`id`, `product_id`, `customer_id`, `driver_id`, `order_sta
 (53, 2, 49, 0, 'awaiting_payment_approval', 2, '1689672649'),
 (54, 1, 49, 0, 'awaiting_payment_approval', 1, '1689672815'),
 (55, 1, 49, 0, 'awaiting_payment_approval', 2, '1689672815'),
-(56, 2, 49, 0, 'payment_approved', 11, '1689673129'),
-(57, 2, 49, 0, 'payment_approved', 2, '1689673129');
+(56, 2, 49, 2, 'payment_approved', 11, '1689673129'),
+(57, 2, 49, 0, 'payment_approved', 2, '1689673129'),
+(59, 2, 48, 0, 'awaiting_payment_approval', 0, '1721198551'),
+(61, 1, 48, 0, 'pending', 11, NULL);
 
 -- --------------------------------------------------------
 
@@ -233,8 +251,9 @@ CREATE TABLE `payments` (
 --
 
 INSERT INTO `payments` (`id`, `finance_manager_id`, `customer_id`, `amount`, `payment_date`, `transaction_code`, `product_id`, `payment_status`, `supplier_id`, `order_id`) VALUES
-(33, NULL, 49, 369, '2023-07-18 09:33:42', 'AHGDHFG123', 54, 'pending', 0, ''),
-(34, NULL, 49, 1599, '2023-07-18 09:46:03', 'AHGDHFG123', 56, 'approved', 0, '56,57');
+(33, NULL, 49, 369, '2024-06-19 12:45:30', 'AHGDHFG123', 54, 'approved', 0, ''),
+(34, NULL, 49, 1599, '2023-07-18 09:46:03', 'AHGDHFG123', 56, 'approved', 0, '56,57'),
+(35, NULL, 48, 0, '2024-07-17 06:42:59', 'AAAAAAA111', 59, 'pending', 0, '59');
 
 -- --------------------------------------------------------
 
@@ -380,7 +399,7 @@ ALTER TABLE `drivers`
 -- Indexes for table `feedback`
 --
 ALTER TABLE `feedback`
-  ADD PRIMARY KEY (`message_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `finance_manager`
@@ -444,7 +463,7 @@ ALTER TABLE `admininfo`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `customer_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `customer_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `drivers`
@@ -456,7 +475,7 @@ ALTER TABLE `drivers`
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `message_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT for table `finance_manager`
@@ -468,13 +487,13 @@ ALTER TABLE `finance_manager`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
 -- AUTO_INCREMENT for table `payments`
 --
 ALTER TABLE `payments`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `products`

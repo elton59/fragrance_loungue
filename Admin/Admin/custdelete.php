@@ -166,7 +166,7 @@ else
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy;  <a href="http://elton.html">eltonokoth 2023</a>.</strong>
+    <strong>Copyright &copy;  <a href="http://elton.html">joyleen 2023</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
     

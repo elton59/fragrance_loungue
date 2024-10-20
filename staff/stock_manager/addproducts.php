@@ -97,7 +97,7 @@ include("navbar.php");
     //create connection
     $mysqli = new mysqli($servername, $username, $password, $db);
 
-    $sql = $mysqli->query("INSERT INTO products(product_name,category,quantity,batch_no,product_img_name,description) VALUES('$pname','$category','$quantity','$batch_no','$img','$description')") or die($mysqli->error);
+    $sql = $mysqli->query("INSERT INTO products(product_name,category,quantity,batch_no,product_img_name,description,stock_in) VALUES('$pname','$category','$quantity','$batch_no','$img','$description','$quantity')") or die($mysqli->error);
     if ($sql) {
 
       echo "<script>alert('record added successfully');
@@ -186,7 +186,7 @@ include("navbar.php");
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; <a href="http://elton.html">eltonokoth 2023</a>.</strong>
+    <strong>Copyright &copy; <a href="http://elton.html">joyleen 2023</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
 
